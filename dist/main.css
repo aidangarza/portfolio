@@ -1,8 +1,8 @@
 .color--primary {
-  color: #f90;
+  color: #f18432;
 }
 .color--secondary {
-  color: #dc7000;
+  color: #f39b4a;
 }
 .color--white {
   color: #fff;
@@ -14,10 +14,10 @@
   color: #aaa;
 }
 .border--primary {
-  border-color: #f90;
+  border-color: #f18432;
 }
 .border--secondary {
-  border-color: #dc7000;
+  border-color: #f39b4a;
 }
 .border--white {
   border-color: #fff;
@@ -29,10 +29,10 @@
   border-color: #aaa;
 }
 .background--primary {
-  background-color: #f90;
+  background-color: #f18432;
 }
 .background--secondary {
-  background-color: #dc7000;
+  background-color: #f39b4a;
 }
 .background--white {
   background-color: #fff;
@@ -59,15 +59,18 @@
   box-sizing: border-box;
 }
 body {
-  padding: 10vh 2vw;
+  padding: 10vh 0;
 }
 a {
-  color: #f90;
+  color: #f39b4a;
 }
 a:active,
 a:focus,
-a:hover {
-  color: #dc7000;
+a:hover,
+a:active i:before,
+a:focus i:before,
+a:hover i:before {
+  color: #f18432;
 }
 header,
 footer {
@@ -109,6 +112,7 @@ section {
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
+  padding: 0 5vw;
 }
 .quote {
   display: flex;
@@ -167,6 +171,9 @@ section {
     padding-left: 30px;
   }
 }
+#testimonials {
+  background-size: 100% 100%;
+}
 #testimonials figure {
   margin: 1vh 10vw;
 }
@@ -223,17 +230,20 @@ section {
   #experience .corner--top-left:before {
     bottom: -5px;
     width: 5px;
-    background-image: -webkit-gradient(linear, 0 100%, 0 0, from(transparent), to(#f90));
-    background-image: -webkit-linear-gradient(#f90, transparent);
-    background-image: -moz-linear-gradient(#f90, transparent);
-    background-image: -o-linear-gradient(#f90, transparent);
+    background-image: -webkit-gradient(linear, 0 100%, 0 0, from(transparent), to(#f39b4a));
+    background-image: -webkit-linear-gradient(#f39b4a, transparent);
+    background-image: -moz-linear-gradient(#f39b4a, transparent);
+    background-image: -o-linear-gradient(#f39b4a, transparent);
   }
   #experience .corner--top-left:after {
     right: -5px;
     height: 5px;
-    background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#f90), to(transparent));
-    background-image: -webkit-linear-gradient(left, #f90, transparent);
-    background-image: -moz-linear-gradient(left, #f90, transparent);
-    background-image: -o-linear-gradient(left, #f90, transparent);
+    background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#f39b4a), to(transparent));
+    background-image: -webkit-linear-gradient(left, #f39b4a, transparent);
+    background-image: -moz-linear-gradient(left, #f39b4a, transparent);
+    background-image: -o-linear-gradient(left, #f39b4a, transparent);
   }
+}
+#projects {
+  background-size: 100% 100%;
 }
