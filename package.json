@@ -1,0 +1,23 @@
+{
+  "name": "Portfolio",
+  "version": "0.0.1",
+  "description": "A simple, front-end only portfolio site for me.",
+  "main": "index.js",
+  "author": "aidangarza <aidangarza@gmail.com>",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-js-import": "^1.0.6",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-stylus": "^2.7.0",
+    "gulp-uglify": "^3.0.0",
+    "pump": "^3.0.0",
+    "through2": "^2.0.3"
+  }
+}

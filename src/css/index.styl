@@ -1,0 +1,97 @@
+.color--
+  &primary
+    color: #ff9900
+  &secondary
+    color: #ff9900
+  &white
+    color: #ffffff
+  &black
+    color: #333333
+
+.border--
+  &primary
+    border-color: #ff9900
+  &secondary
+    border-color: #ff9900
+  &white
+    border-color: #ffffff
+  &black
+    border-color: #333333
+
+.background--
+  &primary
+    background-color: #ff9900
+  &secondary
+    background-color: #ff9900
+  &white
+    background-color: #ffffff
+  &black
+    background-color: #333333
+
+.float
+  &--right
+    float: right
+  &--left
+    float: left
+
+*
+  box-sizing: border-box
+
+body
+  padding: 10vh 2vw
+
+header,
+footer
+  position: fixed
+  right: 0
+  left: 0
+  height: 10vh
+  padding: 0 2vw
+  line-height: 10vh
+  z-index: 10
+
+header
+  top: 0
+  border-bottom: 1px solid
+
+  h1
+    margin: 0
+    font-size: 5vh
+    line-height: 10vh
+    font-weight: normal
+
+footer
+  bottom: 0
+  border-top: 1px solid
+
+  .footer-link
+    font-size: 5vh
+    line-height: 10vh
+    margin-right: 2vw
+    text-decoration: none
+    
+    &:last-child
+      margin-right: 0
+
+section
+  height: 80vh
+  overflow: auto
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-wrap: wrap
+
+#about
+  & > img
+    width: 360px
+    max-width: 100%
+    border: 1px solid
+
+  & > div
+    width: 100%
+
+    @media (min-width: 829px)
+      width: 435px
+      padding-left: 30px
+
+
