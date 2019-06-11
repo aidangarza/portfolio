@@ -61,6 +61,14 @@
 body {
   padding: 10vh 2vw;
 }
+a {
+  color: #f90;
+}
+a:active,
+a:focus,
+a:hover {
+  color: #dc7000;
+}
 header,
 footer {
   position: fixed;
@@ -95,11 +103,11 @@ footer .footer-link:last-child {
   margin-right: 0;
 }
 section {
-  height: 80vh;
-  overflow: auto;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  align-content: center;
   flex-wrap: wrap;
 }
 .quote {
@@ -137,6 +145,13 @@ section {
   right: -0.5em;
   line-height: 0.5em;
 }
+.role {
+  padding: 1vh 0;
+}
+.role p {
+  padding: 0;
+  margin: 5px 0;
+}
 #about > img {
   width: 360px;
   max-width: 100%;
@@ -170,4 +185,54 @@ section {
 #testimonials figcaption:not(.align--right):before {
   content: '\2B11';
   font-size: 2em;
+}
+#experience {
+  justify-content: flex-start;
+}
+#experience h1 {
+  width: 100%;
+  margin-bottom: 1vh;
+}
+@media (min-width: 829px) {
+  #experience h1 {
+    margin-left: 5vw;
+  }
+  #experience .skew {
+    margin-left: 10vw;
+    width: 80vw;
+    transform: skewX(15deg);
+  }
+  #experience .skew__inner {
+    padding-top: 1vh;
+    padding-left: 3vh;
+  }
+  #experience .skew__item p {
+    transform: skewX(-15deg);
+  }
+  #experience .corner--top-left {
+    position: relative;
+  }
+  #experience .corner--top-left:before,
+  #experience .corner--top-left:after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+  }
+  #experience .corner--top-left:before {
+    bottom: -5px;
+    width: 5px;
+    background-image: -webkit-gradient(linear, 0 100%, 0 0, from(transparent), to(#f90));
+    background-image: -webkit-linear-gradient(#f90, transparent);
+    background-image: -moz-linear-gradient(#f90, transparent);
+    background-image: -o-linear-gradient(#f90, transparent);
+  }
+  #experience .corner--top-left:after {
+    right: -5px;
+    height: 5px;
+    background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#f90), to(transparent));
+    background-image: -webkit-linear-gradient(left, #f90, transparent);
+    background-image: -moz-linear-gradient(left, #f90, transparent);
+    background-image: -o-linear-gradient(left, #f90, transparent);
+  }
 }

@@ -52,6 +52,14 @@
 body
   padding: 10vh 2vw
 
+a
+  color: #f90
+  
+  &:active,
+  &:focus,
+  &:hover
+    color: #dc7000
+
 header,
 footer
   position: fixed
@@ -90,6 +98,7 @@ section
   display: flex
   align-items: center
   justify-content: center
+  align-content: center
   flex-wrap: wrap
 
 .quote
@@ -126,6 +135,13 @@ section
       right: -0.5em
       line-height: 0.5em
 
+.role
+  padding: 1vh 0
+  
+  p
+    padding: 0
+    margin: 5px 0
+
 #about
   & > img
     width: 360px
@@ -159,3 +175,53 @@ section
       &:before
         content: '\2B11'
         font-size: 2em
+
+#experience
+  justify-content: flex-start
+
+  h1
+    width: 100%
+    margin-bottom: 1vh
+  
+  @media (min-width: 829px)
+    h1
+      margin-left: 5vw
+
+    .skew
+      margin-left: 10vw
+      width: 80vw
+      transform: skewX(15deg)
+
+      &__inner
+        padding-top: 1vh
+        padding-left: 3vh
+
+      &__item
+        p
+          transform: skewX(-15deg)
+    
+    .corner--top-left
+      position: relative
+            
+      &:before,
+      &:after
+        content: ''
+        position: absolute
+        top: -5px
+        left: -5px
+      
+      &:before
+        bottom: -5px
+        width: 5px
+        background-image: -webkit-gradient(linear, 0 100%, 0 0, from(transparent), to(#f90))
+        background-image: -webkit-linear-gradient(#f90, transparent)
+        background-image: -moz-linear-gradient(#f90, transparent)
+        background-image: -o-linear-gradient(#f90, transparent)
+
+      &:after
+        right: -5px
+        height: 5px
+        background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#f90), to(transparent))
+        background-image: -webkit-linear-gradient(left, #f90, transparent)
+        background-image: -moz-linear-gradient(left, #f90, transparent)
+        background-image: -o-linear-gradient(left, #f90, transparent)
