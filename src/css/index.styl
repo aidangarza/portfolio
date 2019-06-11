@@ -1,38 +1,50 @@
 .color--
   &primary
-    color: #ff9900
+    color: #f90
   &secondary
-    color: #ff9900
+    color: #dc7000
   &white
-    color: #ffffff
+    color: #fff
   &black
-    color: #333333
+    color: #333
+  &gray
+    color: #aaa
 
 .border--
   &primary
-    border-color: #ff9900
+    border-color: #f90
   &secondary
-    border-color: #ff9900
+    border-color: #dc7000
   &white
-    border-color: #ffffff
+    border-color: #fff
   &black
-    border-color: #333333
+    border-color: #333
+  &gray
+    border-color: #aaa
 
 .background--
   &primary
-    background-color: #ff9900
+    background-color: #f90
   &secondary
-    background-color: #ff9900
+    background-color: #dc7000
   &white
-    background-color: #ffffff
+    background-color: #fff
   &black
-    background-color: #333333
+    background-color: #333
+  &gray
+    background-color: #aaa
 
 .float
   &--right
     float: right
   &--left
     float: left
+
+.align
+  &--right
+    text-align: right
+  &--left
+    text-align: left
 
 *
   box-sizing: border-box
@@ -81,17 +93,38 @@ section
   justify-content: center
   flex-wrap: wrap
 
+.quote
+  position: relative
+  
+  &:before,
+  &:after
+    font-size: 3em
+    position: absolute
+    color: #333
+    font-family: serif
+
+  &:before
+    content: '\201C'
+    top: -0.5em
+    left: -0.5em
+  &:after
+    content: '\201D'
+    bottom: -0.5em
+    right: -0.5em
+
 #about
   & > img
     width: 360px
     max-width: 100%
     border: 1px solid
 
-  & > div
+  & > article
     width: 100%
 
     @media (min-width: 829px)
       width: 435px
       padding-left: 30px
 
-
+#testimonials
+  figure
+    margin: 5vh 10vw
