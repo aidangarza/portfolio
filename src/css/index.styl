@@ -94,23 +94,38 @@ section
   flex-wrap: wrap
 
 .quote
-  position: relative
-  
-  &:before,
-  &:after
-    font-size: 3em
-    position: absolute
-    color: #333
-    font-family: serif
+  display: flex
+  align-items: flex-end
 
-  &:before
-    content: '\201C'
-    top: -0.5em
-    left: -0.5em
-  &:after
-    content: '\201D'
-    bottom: -0.5em
-    right: -0.5em
+  img + p,
+  p + img
+    margin-left: 3em
+
+  img
+    width: 90px
+    border-radius: 45px
+    border: 1px solid
+
+  &__content
+    flex: 1
+    position: relative
+    
+    &:before,
+    &:after
+      font-size: 3em
+      position: absolute
+      color: #333
+      font-family: serif
+
+    &:before
+      content: '\201C'
+      top: -0.5em
+      left: -0.5em
+    &:after
+      content: '\201D'
+      bottom: -0.5em
+      right: -0.5em
+      line-height: 0.5em
 
 #about
   & > img
@@ -127,4 +142,21 @@ section
 
 #testimonials
   figure
-    margin: 5vh 10vw
+    margin: 1vh 10vw
+  
+  figcaption
+    font-style: italic
+    
+    &.align--right
+      margin-right: 43px
+
+      &:after
+        content: '\2B0F'
+        font-size: 2em
+
+    &:not(.align--right)
+      margin-left: 36px
+
+      &:before
+        content: '\2B11'
+        font-size: 2em
