@@ -63,6 +63,41 @@ a
     & i:before
       color: #f18432
 
+nav
+  position: fixed
+  right: 0
+  top: 0
+  height: 10vh
+  line-height: 10vh
+  font-size: 5vh
+  padding-right: 5vw
+  z-index: 10
+
+  label
+    font-size: 3vh
+
+.nav
+  &__input
+    border: none
+    outline: none
+    pointer-events: none
+
+  &__menu
+    display: none
+    list-style: none
+    position: absolute
+    top: 0
+    right: 10vw
+    border: 1px solid
+    font-size: 18px
+    line-height: 48px
+    padding: 10px 20px
+    
+    ^[0]__input:focus + &,
+    ^[0]__input:active + &,
+    &:hover
+      display: block
+
 header,
 footer
   position: fixed
@@ -183,7 +218,7 @@ section
         content: '\2B11'
         font-size: 2em
 
-#experience
+#recommendations
   justify-content: flex-start
 
   h1

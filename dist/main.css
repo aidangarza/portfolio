@@ -72,6 +72,40 @@ a:focus i:before,
 a:hover i:before {
   color: #f18432;
 }
+nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 10vh;
+  line-height: 10vh;
+  font-size: 5vh;
+  padding-right: 5vw;
+  z-index: 10;
+}
+nav label {
+  font-size: 3vh;
+}
+.nav__input {
+  border: none;
+  outline: none;
+  pointer-events: none;
+}
+.nav__menu {
+  display: none;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  right: 10vw;
+  border: 1px solid;
+  font-size: 18px;
+  line-height: 48px;
+  padding: 10px 20px;
+}
+.nav__input:focus + .nav__menu,
+.nav__input:active + .nav__menu,
+.nav__menu:hover {
+  display: block;
+}
 header,
 footer {
   position: fixed;
@@ -194,40 +228,40 @@ section {
   content: '\2B11';
   font-size: 2em;
 }
-#experience {
+#recommendations {
   justify-content: flex-start;
 }
-#experience h1 {
+#recommendations h1 {
   width: 100%;
   margin-bottom: 1vh;
 }
 @media (min-width: 829px) {
-  #experience h1 {
+  #recommendations h1 {
     margin-left: 5vw;
   }
-  #experience .skew {
+  #recommendations .skew {
     margin-left: 10vw;
     width: 80vw;
     transform: skewX(15deg);
   }
-  #experience .skew__inner {
+  #recommendations .skew__inner {
     padding-top: 1vh;
     padding-left: 3vh;
   }
-  #experience .skew__item p {
+  #recommendations .skew__item p {
     transform: skewX(-15deg);
   }
-  #experience .corner--top-left {
+  #recommendations .corner--top-left {
     position: relative;
   }
-  #experience .corner--top-left:before,
-  #experience .corner--top-left:after {
+  #recommendations .corner--top-left:before,
+  #recommendations .corner--top-left:after {
     content: '';
     position: absolute;
     top: -5px;
     left: -5px;
   }
-  #experience .corner--top-left:before {
+  #recommendations .corner--top-left:before {
     bottom: -5px;
     width: 5px;
     background-image: -webkit-gradient(linear, 0 100%, 0 0, from(transparent), to(#f39b4a));
@@ -235,7 +269,7 @@ section {
     background-image: -moz-linear-gradient(#f39b4a, transparent);
     background-image: -o-linear-gradient(#f39b4a, transparent);
   }
-  #experience .corner--top-left:after {
+  #recommendations .corner--top-left:after {
     right: -5px;
     height: 5px;
     background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#f39b4a), to(transparent));
