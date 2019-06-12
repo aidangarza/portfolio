@@ -70,31 +70,26 @@ a:hover i:before {
   color: #f18432;
 }
 nav {
-  position: fixed;
-  right: 0;
-  top: 0;
+  flex: 1 1 0px;
   height: 10vh;
-  line-height: 10vh;
-  font-size: 5vh;
-  padding-right: 5vw;
-  z-index: 10;
-}
-nav label {
-  font-size: 3vh;
+  border-bottom: 1px solid;
+  display: flex;
+  justify-content: space-between;
 }
 .nav__trigger {
+  flex: 0 0 auto;
+  font-size: 3vh;
   vertical-align: middle;
 }
 .nav__input {
+  flex: 1 1 287px;
   border: none;
   outline: none;
   pointer-events: none;
-  text-align: right;
 }
-@media (max-width: 839px) {
+@media (max-width: 1005px) {
   .nav__input {
-    z-index: -1000000;
-    position: absolute;
+    max-width: 287px;
   }
 }
 .nav__menu {
@@ -126,12 +121,20 @@ footer {
 header {
   top: 0;
   border-bottom: 1px solid;
-}
-header h1 {
-  margin: 0;
   font-size: 5vh;
   line-height: 10vh;
+  display: flex;
+}
+header h1 {
+  flex: 0 0 auto;
+  font-size: inherit;
+  margin: 0;
   font-weight: normal;
+}
+@media (max-width: 1005px) {
+  header {
+    font-size: 3vh;
+  }
 }
 footer {
   bottom: 0;

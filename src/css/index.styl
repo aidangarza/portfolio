@@ -61,31 +61,26 @@ a
       color: #f18432
 
 nav
-  position: fixed
-  right: 0
-  top: 0
+  flex: 1 1 0px
   height: 10vh
-  line-height: 10vh
-  font-size: 5vh
-  padding-right: 5vw
-  z-index: 10
-
-  label
-    font-size: 3vh
+  border-bottom: 1px solid
+  display: flex
+  justify-content: space-between
 
 .nav
   &__trigger
+    flex: 0 0 auto
+    font-size: 3vh
     vertical-align: middle
 
   &__input
+    flex: 1 1 287px
     border: none
     outline: none
     pointer-events: none
-    text-align: right
 
-    @media (max-width: 839px)
-      z-index: -1000000
-      position: absolute
+    @media (max-width: 1005px)
+      max-width: 287px
 
   &__menu
     display: none
@@ -116,12 +111,18 @@ footer
 header
   top: 0
   border-bottom: 1px solid
+  font-size: 5vh
+  line-height: 10vh
+  display: flex
 
   h1
+    flex: 0 0 auto
+    font-size: inherit
     margin: 0
-    font-size: 5vh
-    line-height: 10vh
     font-weight: normal
+
+  @media (max-width: 1005px)
+    font-size: 3vh
 
 footer
   bottom: 0
