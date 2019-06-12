@@ -32,23 +32,22 @@ const skills = [
   ["User Experience (UX)", 2],
   ["Rapid Prototyping", 3],
   ["Network Security", 3],
-  ["Tools & Technologies", 1],
-  ["ReactJS", 1],
-  ["Node.js", 1],
-  ["JavaScript", 1],
+  ["ReactJS", 2],
+  ["VueJS", 2],
+  ["Node.js", 2],
+  ["JavaScript", 2],
   ["JSON", 1],
-  ["Python", 1],
+  ["Python", 2],
   ["git", 1],
-  ["Interpersonal Skills", 1],
   ["Team Management", 1],
   ["Cross-functional Team Leadership", 1],
-  ["Team Leadership", 3],
+  ["Team Leadership", 4],
   ["Engineering Management", 3],
   ["Team Building", 1],
   ["DevOps", 1],
   ["Sprint Planning", 1],
   ["Elixir", 1],
-  ["Software Architecture", 5],
+  ["Software Architecture", 6],
   ["Rapid Application Development (RAD)", 1],
   ["Software Deployment", 2],
   ["Development Strategy", 2]
@@ -77,7 +76,11 @@ Highcharts.chart('skills__cloud', {
         from: -45,
         to: 45,
         orientations: 5
-      }
+      },
+      animation: {
+        duration: 6000
+      },
+      enableMouseTracking: false
     }
   },
   series: [
