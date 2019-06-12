@@ -5,7 +5,7 @@
 
   function handleIOChange (entry, anchor) {
     if (entry.isIntersecting) {
-      input.value = (anchor === 'about') ? '' : `'s ${anchor}`
+      input.value = (anchor === 'about') ? ' M. Garza, Sr.' : `'s ${anchor}`
     }
   }
 
