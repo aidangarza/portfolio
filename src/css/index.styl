@@ -49,9 +49,6 @@
 *
   box-sizing: border-box
 
-body
-  padding: 10vh 0
-
 a
   color: #f39b4a
   
@@ -77,10 +74,18 @@ nav
     font-size: 3vh
 
 .nav
+  &__trigger
+    vertical-align: middle
+
   &__input
     border: none
     outline: none
     pointer-events: none
+    text-align: right
+
+    @media (max-width: 839px)
+      z-index: -1000000
+      position: absolute
 
   &__menu
     display: none
@@ -132,13 +137,13 @@ footer
       margin-right: 0
 
 section
-  min-height: 80vh
+  min-height: 100vh
   display: flex
   align-items: center
   justify-content: center
   align-content: center
   flex-wrap: wrap
-  padding: 0 5vw
+  padding: 10vh 5vw
 
 .quote
   display: flex
@@ -195,7 +200,7 @@ section
       width: 435px
       padding-left: 30px
 
-#testimonials
+#recommendations
   background-size: 100% 100%
 
   figure
@@ -218,7 +223,7 @@ section
         content: '\2B11'
         font-size: 2em
 
-#recommendations
+#experience
   justify-content: flex-start
 
   h1
@@ -274,3 +279,12 @@ section
   &__cloud
     height: 70vh
     width: 100%
+
+.if-mobile
+  display: none
+  
+  @media (max-width: 829px)
+    display: block
+
+    & + .else
+      display: none

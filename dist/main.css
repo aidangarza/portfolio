@@ -58,9 +58,6 @@
 * {
   box-sizing: border-box;
 }
-body {
-  padding: 10vh 0;
-}
 a {
   color: #f39b4a;
 }
@@ -85,10 +82,20 @@ nav {
 nav label {
   font-size: 3vh;
 }
+.nav__trigger {
+  vertical-align: middle;
+}
 .nav__input {
   border: none;
   outline: none;
   pointer-events: none;
+  text-align: right;
+}
+@media (max-width: 839px) {
+  .nav__input {
+    z-index: -1000000;
+    position: absolute;
+  }
 }
 .nav__menu {
   display: none;
@@ -140,13 +147,13 @@ footer .footer-link:last-child {
   margin-right: 0;
 }
 section {
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
-  padding: 0 5vw;
+  padding: 10vh 5vw;
 }
 .quote {
   display: flex;
@@ -205,63 +212,63 @@ section {
     padding-left: 30px;
   }
 }
-#testimonials {
+#recommendations {
   background-size: 100% 100%;
 }
-#testimonials figure {
+#recommendations figure {
   margin: 1vh 10vw;
 }
-#testimonials figcaption {
+#recommendations figcaption {
   font-style: italic;
 }
-#testimonials figcaption.align--right {
+#recommendations figcaption.align--right {
   margin-right: 43px;
 }
-#testimonials figcaption.align--right:after {
+#recommendations figcaption.align--right:after {
   content: '\2B0F';
   font-size: 2em;
 }
-#testimonials figcaption:not(.align--right) {
+#recommendations figcaption:not(.align--right) {
   margin-left: 36px;
 }
-#testimonials figcaption:not(.align--right):before {
+#recommendations figcaption:not(.align--right):before {
   content: '\2B11';
   font-size: 2em;
 }
-#recommendations {
+#experience {
   justify-content: flex-start;
 }
-#recommendations h1 {
+#experience h1 {
   width: 100%;
   margin-bottom: 1vh;
 }
 @media (min-width: 829px) {
-  #recommendations h1 {
+  #experience h1 {
     margin-left: 5vw;
   }
-  #recommendations .skew {
+  #experience .skew {
     margin-left: 10vw;
     width: 80vw;
     transform: skewX(15deg);
   }
-  #recommendations .skew__inner {
+  #experience .skew__inner {
     padding-top: 1vh;
     padding-left: 3vh;
   }
-  #recommendations .skew__item p {
+  #experience .skew__item p {
     transform: skewX(-15deg);
   }
-  #recommendations .corner--top-left {
+  #experience .corner--top-left {
     position: relative;
   }
-  #recommendations .corner--top-left:before,
-  #recommendations .corner--top-left:after {
+  #experience .corner--top-left:before,
+  #experience .corner--top-left:after {
     content: '';
     position: absolute;
     top: -5px;
     left: -5px;
   }
-  #recommendations .corner--top-left:before {
+  #experience .corner--top-left:before {
     bottom: -5px;
     width: 5px;
     background-image: -webkit-gradient(linear, 0 100%, 0 0, from(transparent), to(#f39b4a));
@@ -269,7 +276,7 @@ section {
     background-image: -moz-linear-gradient(#f39b4a, transparent);
     background-image: -o-linear-gradient(#f39b4a, transparent);
   }
-  #recommendations .corner--top-left:after {
+  #experience .corner--top-left:after {
     right: -5px;
     height: 5px;
     background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#f39b4a), to(transparent));
@@ -284,4 +291,15 @@ section {
 #skills__cloud {
   height: 70vh;
   width: 100%;
+}
+.if-mobile {
+  display: none;
+}
+@media (max-width: 829px) {
+  .if-mobile {
+    display: block;
+  }
+  .if-mobile + .else {
+    display: none;
+  }
 }
