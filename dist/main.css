@@ -221,24 +221,22 @@ section {
   background-size: 100% 100%;
 }
 #recommendations figure {
-  margin: 1vh 10vw;
+  margin: 3vh 10vw;
 }
 #recommendations figcaption {
   font-style: italic;
 }
 #recommendations figcaption.align--right {
-  margin-right: 43px;
+  margin-right: calc(3em + 90px);
 }
 #recommendations figcaption.align--right:after {
-  content: '\2B0F';
-  font-size: 2em;
+  content: ' -';
 }
 #recommendations figcaption:not(.align--right) {
-  margin-left: 36px;
+  margin-left: calc(3em + 90px);
 }
 #recommendations figcaption:not(.align--right):before {
-  content: '\2B11';
-  font-size: 2em;
+  content: '- ';
 }
 #experience {
   justify-content: flex-start;
