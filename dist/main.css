@@ -78,7 +78,7 @@ footer {
   right: 0;
   left: 0;
   height: 10vh;
-  padding: 0 2vw;
+  padding: 0 5vw;
   line-height: 10vh;
   z-index: 10;
 }
@@ -244,6 +244,10 @@ section {
     background-image: -o-linear-gradient(left, #f39b4a, transparent);
   }
 }
-#projects {
+#skills {
   background-size: 100% 100%;
+}
+#skills__cloud {
+  height: 70vh;
+  width: 100%;
 }
