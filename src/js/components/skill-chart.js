@@ -93,6 +93,7 @@
       ]
     })
   } catch (e) {
+    console.log('Oops! It looks like highcharts failed, because: ' + e)
     document.getElementById('skills').innerHTML = document.getElementById('skills__noscript').innerHTML
   }
 })()
