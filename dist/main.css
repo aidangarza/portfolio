@@ -58,6 +58,9 @@
 * {
   box-sizing: border-box;
 }
+body {
+  scroll-snap-type: y mandatory;
+}
 a {
   color: #f39b4a;
 }
@@ -159,6 +162,7 @@ section {
   align-content: center;
   flex-wrap: wrap;
   padding: 10vh 5vw;
+  scroll-snap-align: start;
 }
 .quote {
   display: flex;
