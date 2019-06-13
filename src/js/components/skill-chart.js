@@ -1,5 +1,5 @@
 (function(){
-  if ('Highcharts' in window) {
+  try {
     const skills = [
       ["Project Management", 8],
       ["Process Improvement", 8],
@@ -92,5 +92,7 @@
         }
       ]
     })
+  } catch (e) {
+    document.getElementById('skills').innerHTML = document.getElementById('skills__noscript').innerHTML
   }
 })()
