@@ -73,18 +73,28 @@ a:hover i:before {
   color: #f18432;
 }
 nav {
+  -webkit-flex: 1 1 0px;
+  -ms-flex: 1 1 0px;
   flex: 1 1 0px;
   height: 10vh;
   border-bottom: 1px solid;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .nav__trigger {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   font-size: 3vh;
   vertical-align: middle;
 }
 .nav__input {
+  -webkit-flex: 1 1 287px;
+  -ms-flex: 1 1 287px;
   flex: 1 1 287px;
   border: none;
   outline: none;
@@ -128,9 +138,13 @@ header {
   border-bottom: 1px solid;
   font-size: 5vh;
   line-height: 10vh;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
 }
 header h1 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   font-size: inherit;
   margin: 0;
@@ -156,15 +170,27 @@ footer .footer-link:last-child {
 }
 section {
   min-height: 100vh;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
   align-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 10vh 5vw;
   scroll-snap-align: start;
 }
 .quote {
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   align-items: flex-end;
 }
@@ -179,6 +205,8 @@ section {
   border-style: solid;
 }
 .quote__content {
+  -webkit-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   position: relative;
 }
@@ -243,6 +271,8 @@ section {
   content: '- ';
 }
 #experience {
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   overflow-x: hidden;
 }
@@ -257,6 +287,8 @@ section {
   #experience .skew {
     margin-left: 10vw;
     width: 80vw;
+    -webkit-transform: skewX(15deg);
+    -ms-transform: skewX(15deg);
     transform: skewX(15deg);
   }
   #experience .skew__inner {
@@ -264,6 +296,8 @@ section {
     padding-left: 3vh;
   }
   #experience .skew__item p {
+    -webkit-transform: skewX(-15deg);
+    -ms-transform: skewX(-15deg);
     transform: skewX(-15deg);
   }
   #experience .corner--top-left {
