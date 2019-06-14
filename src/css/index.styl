@@ -56,7 +56,6 @@
 
 body
   scroll-snap-type: y proximity
-  overflow-y: scroll
 
 a
   color: #f39b4a
@@ -91,9 +90,9 @@ nav
     vertical-align: middle
 
   &__input
-    -webkit-flex: 1 1 287px
-    -ms-flex: 1 1 287px
-    flex: 1 1 287px
+    -webkit-flex: 1 1 0px
+    -ms-flex: 1 1 0px
+    flex: 1 1 0px
     border: none
     outline: none
     pointer-events: none
@@ -101,7 +100,7 @@ nav
     margin: 0
 
     @media (max-width: 1005px)
-      max-width: 287px
+      max-width: 240px
 
   &__menu
     display: none
@@ -133,7 +132,6 @@ header
   top: 0
   border-bottom: 1px solid
   font-size: 5vh
-  line-height: 10vh
   display: -ms-flexbox
   display: -webkit-flex
   display: flex
@@ -263,9 +261,13 @@ section
 #recommendations
   background-size: 100% 100%
 
+  .carousel
+    overflow: hidden
+
   figure
-    margin: 3vh 10vw
-  
+    margin: 0
+    padding: 3vh 10vw
+
   figcaption
     font-style: italic
 
