@@ -2,7 +2,7 @@
   if ('IntersectionObserver' in window) {
     const threshold = (document.body.clientWidth < 829) ? [0.25] : [0.8]
     const input = document.getElementById('anchor')
-    const anchors = ['about', 'recommendations', 'experience', 'skills']
+    const anchors = ['about', 'recommendations', 'experience', 'skills', 'interests']
 
     function handleIOChange (entry, anchor) {
       if (entry.isIntersecting) {
