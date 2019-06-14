@@ -357,6 +357,7 @@ section {
   width: 60vh;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 #hex-grid li {
   list-style-type: none;
