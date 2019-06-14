@@ -43,6 +43,15 @@
 .background--gray {
   background-color: #aaa;
 }
+.text-shadow--primary {
+  text-shadow: -1px -1px 1px #f18432, 1px -1px 1px #f18432, -1px 1px 1px #f18432, 1px 1px 1px #f18432;
+}
+.text-shadow--black {
+  text-shadow: -1px -1px 1px #333, 1px -1px 1px #333, -1px 1px 1px #333, 1px 1px 1px #333;
+}
+.text-shadow--white {
+  text-shadow: -1px -1px 1px #fff, 1px -1px 1px #fff, -1px 1px 1px #fff, 1px 1px 1px #fff;
+}
 .float--right {
   float: right;
 }
@@ -412,8 +421,8 @@ section {
   padding: 0.5vh;
   position: absolute;
   top: 20%;
-  left: 20%;
-  width: 60%;
+  left: 12%;
+  width: 76%;
   height: 60%;
   font-size: 1.4vh;
   display: -ms-flexbox;
@@ -422,68 +431,16 @@ section {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-}
-.hexagon p.w,
-.hexagon p.nw,
-.hexagon p.sw {
-  border-left: 1px solid;
-  text-align: left;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-.hexagon p.e,
-.hexagon p.ne,
-.hexagon p.se {
-  border-right: 1px solid;
-  text-align: right;
-  -webkit-align-items: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-}
-.hexagon p.s,
-.hexagon p.se,
-.hexagon p.sw {
-  border-bottom: 1px solid;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: flex-end;
-  justify-content: flex-end;
-}
-.hexagon p.n,
-.hexagon p.ne,
-.hexagon p.nw {
-  border-top: 1px solid;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: flex-start;
-  justify-content: flex-start;
-}
-.hexagon p.e,
-.hexagon p.w,
-.hexagon p.marathon {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-.hexagon p.n,
-.hexagon p.s,
-.hexagon p.marathon {
-  text-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-}
-.hexagon p.marathon {
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
+  text-align: center;
 }
 .hexagon p.marathon b {
   font-size: 5vh;
-}
-.hexagon p.other {
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 .hexagon img {
   height: 15vh;
