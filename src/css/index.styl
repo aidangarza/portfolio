@@ -1,38 +1,44 @@
+$primary = #f18432
+$secondary = #f39b4a
+$white = #fff
+$black = #333
+$gray = #aaa
+
 .color--
   &primary
-    color: #f18432
+    color: $primary
   &secondary
-    color: #f39b4a
+    color: $secondary
   &white
-    color: #fff
+    color: $white
   &black
-    color: #333
+    color: $black
   &gray
-    color: #aaa
+    color: $gray
 
 .border--
   &primary
-    border-color: #f18432
+    border-color: $primary
   &secondary
-    border-color: #f39b4a
+    border-color: $secondary
   &white
-    border-color: #fff
+    border-color: $white
   &black
-    border-color: #333
+    border-color: $black
   &gray
-    border-color: #aaa
+    border-color: $gray
 
 .background--
   &primary
-    background-color: #f18432
+    background-color: $primary
   &secondary
-    background-color: #f39b4a
+    background-color: $secondary
   &white
-    background-color: #fff
+    background-color: $white
   &black
-    background-color: #333
+    background-color: $black
   &gray
-    background-color: #aaa
+    background-color: $gray
 
 .float
   &--right
@@ -58,7 +64,7 @@ body
   scroll-snap-type: y proximity
 
 a
-  color: #f39b4a
+  color: $secondary
   
   &:active,
   &:focus,
@@ -66,7 +72,7 @@ a
     
     &,
     & i:before
-      color: #f18432
+      color: $primary
 
 nav
   -webkit-flex: 1 1 0px
@@ -206,7 +212,7 @@ section
     &:after
       font-size: 3em
       position: absolute
-      color: #333
+      color: $black
       font-family: serif
 
     &:before
@@ -240,8 +246,8 @@ section
   -ms-flex: 1 0 auto
   flex: 1 0 auto
   margin: 0 2px 2px 0
-  background-color: #f18432
-  color: #fff
+  background-color: $primary
+  color: $white
   border-radius: 4px
   padding: 5px 10px
 
@@ -318,18 +324,18 @@ section
       &:before
         bottom: -5px
         width: 5px
-        background-image: -webkit-gradient(linear, 0 100%, 0 0, from(transparent), to(#f39b4a))
-        background-image: -webkit-linear-gradient(#f39b4a, transparent)
-        background-image: -moz-linear-gradient(#f39b4a, transparent)
-        background-image: -o-linear-gradient(#f39b4a, transparent)
+        background-image: -webkit-gradient(linear, 0 100%, 0 0, from(transparent), to($secondary))
+        background-image: -webkit-linear-gradient($secondary, transparent)
+        background-image: -moz-linear-gradient($secondary, transparent)
+        background-image: -o-linear-gradient($secondary, transparent)
 
       &:after
         right: -5px
         height: 5px
-        background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#f39b4a), to(transparent))
-        background-image: -webkit-linear-gradient(left, #f39b4a, transparent)
-        background-image: -moz-linear-gradient(left, #f39b4a, transparent)
-        background-image: -o-linear-gradient(left, #f39b4a, transparent)
+        background-image: -webkit-gradient(linear, 0 0, 100% 0, from($secondary), to(transparent))
+        background-image: -webkit-linear-gradient(left, $secondary, transparent)
+        background-image: -moz-linear-gradient(left, $secondary, transparent)
+        background-image: -o-linear-gradient(left, $secondary, transparent)
 
 #skills
   &__cloud
@@ -339,6 +345,7 @@ section
 #interests
   background-position: center
   background-size: cover
+  position: relative
 
 #hex-grid
   position: relative
@@ -482,6 +489,19 @@ section
     -webkit-transform: translate(-50%, -50%)
     -ms-transform: translate(-50%, -50%)
     transform: translate(-50%, -50%)
+
+.motto
+  position: absolute
+  bottom: 10vh
+  right: 0
+  left: 0
+  font-size: 3vh
+  text-transform: uppercase
+  text-align: center
+
+  @media (max-width: 829px)
+    b
+      display: block
 
 .if-mobile
   display: none

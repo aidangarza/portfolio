@@ -351,6 +351,7 @@ section {
 #interests {
   background-position: center;
   background-size: cover;
+  position: relative;
 }
 #hex-grid {
   position: relative;
@@ -494,6 +495,20 @@ section {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+.motto {
+  position: absolute;
+  bottom: 10vh;
+  right: 0;
+  left: 0;
+  font-size: 3vh;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media (max-width: 829px) {
+  .motto b {
+    display: block;
+  }
 }
 .if-mobile {
   display: none;
