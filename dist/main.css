@@ -73,7 +73,7 @@
   clear: both;
 }
 body {
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
 }
 a {
   color: #f39b4a;
@@ -85,6 +85,65 @@ a:active i:before,
 a:focus i:before,
 a:hover i:before {
   color: #f18432;
+}
+@media (max-width: 829px) {
+  .carousel,
+  .carousel__inner {
+    height: 80vh;
+    width: 90vw;
+  }
+  .carousel__inner {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    scroll-snap-type: y mandatory;
+    overflow-x: scroll;
+  }
+  .carousel__item {
+    scroll-snap-align: start;
+    -webkit-flex: 0 0 90vw;
+    -ms-flex: 0 0 90vw;
+    flex: 0 0 90vw;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 80vh;
+    width: 90vw;
+    position: relative;
+  }
+  #experience .carousel__item {
+    padding: 0 5vw;
+  }
+  .carousel__item:not(:last-child):after {
+    content: '\2192';
+    position: absolute;
+    display: block;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    background-color: #f39b4a;
+    text-align: center;
+    line-height: 60px;
+    bottom: 60px;
+    right: 0;
+  }
+  .carousel__item:last-child:after {
+    content: '\2193';
+    position: absolute;
+    display: block;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    background-color: #f39b4a;
+    text-align: center;
+    line-height: 60px;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 nav {
   -webkit-flex: 1 1 0px;

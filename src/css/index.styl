@@ -1,3 +1,5 @@
+$mobile = 829px
+
 $primary = #f18432
 $secondary = #f39b4a
 $white = #fff
@@ -78,7 +80,7 @@ $gray = #aaa
   clear: both
 
 body
-  scroll-snap-type: y proximity
+  scroll-snap-type: y mandatory
 
 a
   color: $secondary
@@ -90,6 +92,67 @@ a
     &,
     & i:before
       color: $primary
+
+@media (max-width: $mobile)
+  .carousel
+    &,
+    &__inner
+      height: 80vh
+      width: 90vw
+
+    &__inner
+      display: -ms-flexbox
+      display: -webkit-flex
+      display: flex
+      scroll-snap-type: y mandatory
+      overflow-x: scroll
+
+    &__item
+      scroll-snap-align: start
+      -webkit-flex: 0 0 90vw
+      -ms-flex: 0 0 90vw
+      flex: 0 0 90vw
+      display: -ms-flexbox
+      display: -webkit-flex
+      display: flex
+      -webkit-align-items: center
+      -ms-flex-align: center
+      align-items: center
+      height: 80vh
+      width: 90vw
+      position: relative
+
+      #experience &
+        padding: 0 5vw
+
+      &:not(:last-child)
+        &:after
+          content: '\2192'
+          position: absolute
+          display: block
+          height: 60px
+          width: 60px
+          border-radius: 30px
+          background-color: $secondary
+          text-align: center
+          line-height: 60px
+          bottom: 60px
+          right: 0
+
+      &:last-child
+        &:after
+          content: '\2193'
+          position: absolute
+          display: block
+          height: 60px
+          width: 60px
+          border-radius: 30px
+          background-color: $secondary
+          text-align: center
+          line-height: 60px
+          bottom: 60px
+          left: 50%
+          transform: translateX(-50%)
 
 nav
   -webkit-flex: 1 1 0px
@@ -277,7 +340,7 @@ section
   & > article
     width: 100%
 
-    @media (min-width: 829px)
+    @media (min-width: $mobile)
       width: 445px
       padding-left: 30px
 
@@ -311,7 +374,7 @@ section
     width: 100%
     margin-bottom: 1vh
 
-  @media (min-width: 829px)
+  @media (min-width: $mobile)
     .skew
       width: 75vw
       -webkit-transform: skewX(15deg)
@@ -465,14 +528,14 @@ section
   text-transform: uppercase
   text-align: center
 
-  @media (max-width: 829px)
+  @media (max-width: $mobile)
     b
       display: block
 
 .if-mobile
   display: none
   
-  @media (max-width: 829px)
+  @media (max-width: $mobile)
     display: block
 
     & + .else
