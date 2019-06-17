@@ -80,7 +80,7 @@ $gray = #aaa
   clear: both
 
 body
-  scroll-snap-type: y proximity
+  scroll-snap-type: y mandatory
 
 a
   color: $secondary
@@ -137,7 +137,7 @@ a
           background-color: $secondary
           text-align: center
           line-height: 60px
-          bottom: 60px
+          bottom: 10px
           right: 1vw
 
       &:last-child
@@ -151,7 +151,7 @@ a
           background-color: $secondary
           text-align: center
           line-height: 60px
-          bottom: 60px
+          bottom: 10px
           left: 50%
           transform: translateX(-50%)
 
@@ -333,13 +333,19 @@ section
   padding: 5px 10px
 
 #about
+  img
+    border: 1px solid
+
   & > img
     width: 360px
     max-width: 100%
-    border: 1px solid
 
   & > article
     width: 100%
+
+    img
+      width: 120px
+      margin: 18px 18px 18px 0
 
     @media (min-width: $mobile)
       width: 445px

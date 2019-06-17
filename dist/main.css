@@ -73,7 +73,7 @@
   clear: both;
 }
 body {
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
 }
 a {
   color: #f39b4a;
@@ -128,7 +128,7 @@ a:hover i:before {
     background-color: #f39b4a;
     text-align: center;
     line-height: 60px;
-    bottom: 60px;
+    bottom: 10px;
     right: 1vw;
   }
   .carousel__item:last-child:after {
@@ -141,7 +141,7 @@ a:hover i:before {
     background-color: #f39b4a;
     text-align: center;
     line-height: 60px;
-    bottom: 60px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -327,13 +327,19 @@ section {
   border-radius: 4px;
   padding: 5px 10px;
 }
+#about img {
+  border: 1px solid;
+}
 #about > img {
   width: 360px;
   max-width: 100%;
-  border: 1px solid;
 }
 #about > article {
   width: 100%;
+}
+#about > article img {
+  width: 120px;
+  margin: 18px 18px 18px 0;
 }
 @media (min-width: 829px) {
   #about > article {

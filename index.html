@@ -51,8 +51,10 @@
     </nav>
   </header>
   <section id="about">
-    <img src="static/images/headshot.jpg" class="float--left">
+    <span class="if-mobile"></span>
+    <img src="static/images/headshot.jpg" class="float--left else">
     <article>
+      <img src="static/images/headshot.jpg" class="float--left if-mobile">
       <p>My name is <b class="color--primary">Aidan</b> (eye-den) - Gaelic name with a German pronunciation. Thanks, mom! I am: 30 years old; married to an amazing woman; a father of 3 boys; an avid dreamer and tinkerer;  currently the Director of Engineering at IdealSpot Inc.</p>
       <p>Challenging problems excite me, and with nearly a decade of experience in Software Engineering Leadership, I’ve tackled them from many angles: rapid prototyping, architecting and delivering go-to-market products, building high quality engineering teams, and managing engineering operations and security. I'm both highly creative and highly analytical - an artist with a Systems & Industrial Engineering Degree. It makes me a natural problem solver - asking the right questions, discovering the core problems, dreaming up innovative solutions, analyzing them to find the best one, and deploying products on time and on budget. When surrounded by other intelligent and ambitious people, I come alive and turn good ideas into great products and experiences.</p>
     </article>
@@ -127,7 +129,9 @@
           </div>
         </article>
         <article class="role skew__item carousel__item">
-          <p><b>For even more history</b> &#x2192; <a href="https://linkedin.com/in/aidangarza" target="_blank">Visit my LinkedIn profile</a></p>
+          <div>
+            <p><b>For even more history</b> &#x2192; <a href="https://linkedin.com/in/aidangarza" target="_blank">Visit my LinkedIn profile</a></p>
+          </div>
         </article>
       </div>
     </div>
