@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,22 +39,22 @@
   <header class="background--white">
     <h1 class="color--primary">Aidan</h1>
     <nav>
-      <input id="anchor" class="nav__input" readonly>
+      <input id="anchor" class="nav__input" readonly aria-label="This input is not interactive. It simply displays the name of the section that is currently in view.">
       <ul class="nav__menu background--white">
-        <li><a href="#about">About</a></li>
-        <li><a href="#recommendations">Recommendations</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#interests">Interests</a></li>
+        <li><a href="#about" aria-label="Go to the About Section">About</a></li>
+        <li><a href="#recommendations" aria-label="Go to the Recommendations Section">Recommendations</a></li>
+        <li><a href="#experience" aria-label="Go to the Experience Section">Experience</a></li>
+        <li><a href="#skills" aria-label="Go to the Skills Section">Skills</a></li>
+        <li><a href="#interests" aria-label="Go to the Interests Section">Interests</a></li>
       </ul>
       <label for="anchor" class="nav__trigger"><i class="icon-menu"></i></label>
     </nav>
   </header>
   <section id="about">
     <span class="if-mobile"></span>
-    <img src="static/images/headshot.jpg" class="float--left else">
+    <img src="static/images/headshot.jpg" class="float--left else" alt="Aidan's Headshot">
     <article>
-      <img src="static/images/headshot.jpg" class="float--left if-mobile">
+      <img src="static/images/headshot.jpg" class="float--left if-mobile" alt="Aidan's Headshot">
       <p>My name is <b class="color--primary">Aidan</b> (eye-den) - Gaelic name with a German pronunciation. Thanks, mom! I am: 30 years old; married to an amazing woman; a father of 3 boys; an avid dreamer and tinkerer;  currently the Director of Engineering at IdealSpot Inc.</p>
       <p>Challenging problems excite me, and with nearly a decade of experience in Software Engineering Leadership, I’ve tackled them from many angles: rapid prototyping, architecting and delivering go-to-market products, building high quality engineering teams, and managing engineering operations and security. I'm both highly creative and highly analytical - an artist with a Systems & Industrial Engineering Degree. It makes me a natural problem solver - asking the right questions, discovering the core problems, dreaming up innovative solutions, analyzing them to find the best one, and deploying products on time and on budget. When surrounded by other intelligent and ambitious people, I come alive and turn good ideas into great products and experiences.</p>
     </article>
@@ -65,7 +65,7 @@
         <article class="carousel__item">
           <figure>
             <div class="quote">
-              <img class="border--black" src="static/images/ian.jpeg">
+              <img class="border--black" src="static/images/ian.jpeg" alt="Ian's Headshot">
               <p class="quote__content">Aidan thinks differently. He finds inefficiency intolerable, and rather than complaining about the issues, he works to create solutions for everyone.</p>
             </div>
             <figcaption class="color--black">Ian McDowell (Former Boss, VP at Sundt Construction)</figcaption>
@@ -75,7 +75,7 @@
           <figure>
             <div class="quote">
               <p class="quote__content">Aidan is one of the most creative, industrious, and dependable people I have ever had the pleasure of working with. He is a gifted technical communicator and has established core processes in our team, ensuring that we can operate at maximum capacity with minimal overhead.</p>
-              <img class="border--black" src="static/images/josh.jpg">
+              <img class="border--black" src="static/images/josh.jpg" alt="Josh's Headshot">
             </div>
             <figcaption class="color--black align--right">Josh Winters (Colleague at IdealSpot)</figcaption>
           </figure>
@@ -83,7 +83,7 @@
         <article class="carousel__item">
           <figure>
             <div class="quote">
-              <img class="border--black" src="static/images/paul.jpeg">
+              <img class="border--black" src="static/images/paul.jpeg" alt="Paul's Headshot">
               <p class="quote__content">He's smart and he enjoys finding interesting and creative solutions to complex problems. It seems like whatever problem I throw at him, he knows precisely what to do to solve it and he works closely with his team to ensure all work is completed on time and on budget.</p>
             </div>
             <figcaption class="color--black">Paul Henderson (Former Client, Owner at CostumerManager)</figcaption>
@@ -93,7 +93,7 @@
           <figure>
             <div class="quote">
               <p class="quote__content">Aidan is by far the best manager I have worked for because he knows how to keep the engineering team on time but still balance the human element of managing a company. He is always willing to listen and push his engineers so that they can achieve their goals.</p>
-              <img class="border--black" src="static/images/james.jpeg">
+              <img class="border--black" src="static/images/james.jpeg" alt="James' Headshot">
             </div>
             <figcaption class="color--black align--right">James Drakes (Former Employee at IdealSpot)</figcaption>
           </figure>
@@ -106,7 +106,7 @@
       <div class="skew__inner carousel__inner corner--top-left">
         <article class="role skew__item carousel__item">
           <div>
-            <p><b>Director of Engineering</b> | <a target="_blank" href="https://www.idealspot.com">IdealSpot Inc.</a> in Austin, TX</p>
+            <p><b>Director of Engineering</b> | <a target="_blank" rel="noopener" href="https://www.idealspot.com" aria-label="Visit IdealSpot.com">IdealSpot Inc.</a> in Austin, TX</p>
             <p><i>October 2015 - Present</i></p>
             <p>When I started at IdealSpot, it was a bootstrapped startup with a bare-bones prototype for a commercial real estate site selection platform. I designed, architected, built, and launched the first go-to-market product in May of 2016. Then, based on user feedback and industry analysis, I did it all again for Version 2 of the platform in August of 2017 after hiring a small, first-class engineering team. In addition to complete ownership of the web platform (design, architecture, sprint planning, engineering management, QA, and CI/CD), I handle operational security for the organization, and SalesOps.</p>
             <p class="color--gray">[Python, Elixir, Node.js, Vue.js, Docker + Kubernetes, Google Cloud]</p>
@@ -114,7 +114,7 @@
         </article>
         <article class="role skew__item carousel__item">
           <div>
-            <p><b>Software Engineer</b> | <a target="_blank" href="https://www.malauzai.com">Malauzai Inc.</a> in Austin, TX</p>
+            <p><b>Software Engineer</b> | <a target="_blank" rel="noopener" href="https://www.malauzai.com" aria-label="Visit Malauzai.com">Malauzai Inc.</a> in Austin, TX</p>
             <p><i>March 2014 - October 2015</i></p>
             <p>As a part of a team of only 3 engineers, I developed a full internet banking web app from the ground up in less than a year. The product was built using Node.js, React.js, and LESS, and it interfaced with a central Web Services Platform that also services iOS and Android applications. The platform was acquired by Finastra in 2018.</p>
             <p class="color--gray">[Node.js, React.js, LESS]</p>
@@ -130,7 +130,7 @@
         </article>
         <article class="role skew__item carousel__item">
           <div>
-            <p><b>For even more history</b> &#x2192; <a href="https://linkedin.com/in/aidangarza" target="_blank">Visit my LinkedIn profile</a></p>
+            <p><b>For even more history</b> &#x2192; <a href="https://linkedin.com/in/aidangarza" target="_blank" rel="noopener" aria-label="View Aidan's LinkedIn Profile">Visit my LinkedIn profile</a></p>
           </div>
         </article>
       </div>
@@ -202,7 +202,7 @@
     <ul id="hex-grid" class="clear">
       <li>
         <div class="hexagon background--white">
-          <img src="static/images/u-of-a.jpg">
+          <img src="static/images/u-of-a.jpg" alt="University of Arizona Emblem">
         </div>
       </li>
       <li>
@@ -227,7 +227,7 @@
       </li>
       <li>
         <div class="hexagon background--black">
-          <img src="static/images/flags.png">
+          <img src="static/images/flags.png" alt="Flags of USA, Italy, Spain, and Germany">
         </div>
       </li>
       <li>
@@ -237,7 +237,7 @@
       </li>
       <li>
         <div class="hexagon background--white">
-          <img src="static/images/ironman.png">
+          <img src="static/images/ironman.png" alt="Ironman's Mask">
         </div>
       </li>
       <li>
@@ -259,13 +259,13 @@
   </section>
   <footer class="background--white">
     <span>
-      <a class="footer-link" target="_blank" href="https://linkedin.com/in/aidangarza"><i class="icon-linkedin"></i></a>
-      <a class="footer-link color--black" target="_blank" href="https://github.com/aidangarza"><i class="icon-github"></i></a>
-      <a class="footer-link" target="_blank" href="https://gitlab.com/aidangarza"><i class="icon-gitlab"></i></a>
-      <a class="footer-link color--black" target="_blank" href="https://codepen.io/aidangarza"><i class="icon-codepen"></i></a>
+      <a class="footer-link" target="_blank" rel="noopener" href="https://linkedin.com/in/aidangarza" aria-label="Visit Aidan's LinkedIn Profile"><i class="icon-linkedin"></i></a>
+      <a class="footer-link color--black" target="_blank" rel="noopener" href="https://github.com/aidangarza" aria-label="Visit Aidan's Github Profile"><i class="icon-github"></i></a>
+      <a class="footer-link" target="_blank" rel="noopener" href="https://gitlab.com/aidangarza" aria-label="Visit Aidan's Gitlab Profile"><i class="icon-gitlab"></i></a>
+      <a class="footer-link color--black" target="_blank" rel="noopener" href="https://codepen.io/aidangarza" aria-label="Visit Aidan's Codepen Profile"><i class="icon-codepen"></i></a>
     </span>
     <span class="float--right">
-      <a class="footer-link color--secondary" href="mailto:aidangarza+portfolio@gmail.com"><i class="footer-icon icon-contact"></i></a>
+      <a class="footer-link color--secondary" href="mailto:aidangarza+portfolio@gmail.com" aria-label="Email Aidan"><i class="footer-icon icon-contact"></i></a>
     </span>
   </footer>
   <!-- JavaScript -->
