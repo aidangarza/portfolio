@@ -539,10 +539,9 @@ section
       display: block
 
 .if-mobile
-  display: none
+  @media (min-width: $mobile+1px)
+    display: none
   
   @media (max-width: $mobile)
-    display: block
-
     & + .else
       display: none

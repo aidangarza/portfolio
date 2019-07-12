@@ -532,13 +532,12 @@ section {
     display: block;
   }
 }
-.if-mobile {
-  display: none;
+@media (min-width: 830px) {
+  .if-mobile {
+    display: none;
+  }
 }
 @media (max-width: 829px) {
-  .if-mobile {
-    display: block;
-  }
   .if-mobile + .else {
     display: none;
   }
