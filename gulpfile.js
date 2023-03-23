@@ -17,7 +17,7 @@ function logFileHelpers() {
   });
 }
 
-gulp.task('stylus', function (cb) {
+function handleStylus(cb) {
   pump([
     gulp.src('./src/css/*.styl'),
     stylus(),
@@ -26,7 +26,9 @@ gulp.task('stylus', function (cb) {
     ],
     cb
   )
-});
+}
+
+gulp.task('stylus', handleStylus);
 
 gulp.task('watch', function () {
   gulp.watch('./src/css/*.styl', ['stylus']);
@@ -44,6 +46,6 @@ gulp.task('default', function (cb) {
       gulp.dest('dist'),
       logFileHelpers()
     ],
-    cb
+    function() { handleStylus(cb) }
   )
-})
+});
